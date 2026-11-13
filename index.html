@@ -2631,7 +2631,7 @@
                 showToast('Master Access Granted');
             } catch (e) {
                 console.error(e);
-                err.textContent = 'Access Denied.';
+                err.textContent = 'Access Denied. (' + ((e && (e.code || e.message)) || 'unknown') + ')';
                 err.classList.remove('hidden');
             }
         }
